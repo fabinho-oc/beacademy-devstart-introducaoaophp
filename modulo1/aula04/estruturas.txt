@@ -1,0 +1,5 @@
+São 3 os tipos de estruturas, sendo elas:
+    Estrutura Sequencial;
+    Estrutura de Decisão;
+    Estrutura de Repetição;
+
