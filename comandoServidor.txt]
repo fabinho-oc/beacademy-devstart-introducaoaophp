@@ -1,0 +1,5 @@
+Comando para acessar a pasta
+
+devstart_paylivre\beacademy-devstart-introducaoaophp\modulo1
+                                                        
+    php -S localhost:8000 -t aula05
