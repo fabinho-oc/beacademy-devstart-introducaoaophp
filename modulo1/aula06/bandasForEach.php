@@ -7,6 +7,9 @@ $bandas = [
     'Iram Maiden'
 ];
 
+$bandas = "Nirvana";
+$bandas = "Calcinha preta";
+
 echo '<ul>';
 
     foreach ($bandas as $cadabanda) {
