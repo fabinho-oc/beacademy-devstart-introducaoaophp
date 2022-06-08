@@ -24,10 +24,38 @@ $aluno2 = [
             ]
 ];
 
+$aluno3 = [
+   'nome' => 'Lucas', //0
+   'email' => 'lucas@email.com', // 1
+   'telefone' => '81 9 97777-0000', // 2
+        'notas' => [ //3
+                9,
+                8.5,
+                7.5,
+                10,
+            ]
+];
+
+$aluno4 = [
+   'nome' => 'Zezim', //0
+   'email' => 'Zezim@email.com', // 1
+   'telefone' => '81 9 98888-0001', // 2
+        'notas' => [ //3
+                9,
+                8.5,
+                7.5,
+                10,
+            ]
+];
+
+
+
 $alunos= [ //dimensao 1
             
         $aluno1,
         $aluno2,
+        $aluno3,
+        $aluno4,
 
             [//dimensao 2
 
