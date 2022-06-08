@@ -40,8 +40,15 @@ $alunos= [ //dimensao 1
         ];
 
 //echo $alunos[0][0][0];
-?>
+/*
+foreach ($alunos as $cadaaluno) {
+   // var_dump($cadaaluno);
 
+    echo $cadaaluno['nome'].'<br>';
+
+}
+*/
+?>
 
 <table border="1">
     
@@ -55,7 +62,19 @@ $alunos= [ //dimensao 1
     </thead>
 
     <tbody>
-        ....
+        <?php
+
+            foreach ($alunos as $cadaaluno) {
+                
+                echo '<tr>';
+                
+                    echo '<td>' . $cadaaluno['nome'] .'</td>';
+                    echo '<td>' . $cadaaluno['email'] .'</td>';
+                    echo '<td>' . $cadaaluno['telefone'] .'</td>';
+                
+                echo '</tr>';
+            }
+        ?>
     </tbody>
 
 </table>
