@@ -14,10 +14,10 @@
 */
 
 $aluno1 = [
-    'Chiquim', //0
-    'chiquim@email.com', // 1
-    '85 9 8889-0000', // 2
-            [ //3
+   'nome' => 'Chiquim', //0
+   'email' => 'chiquim@email.com', // 1
+   'telefone' => '85 9 8889-0000', // 2
+        'notas' => [ //3
                 9, 
                 8.5,
                 7.5,
@@ -26,10 +26,10 @@ $aluno1 = [
 ];
 
 $aluno2 = [
-    'Maria',
-    'maria@email.com',
-    '85 9 9999-0000',
-            [
+   'nome' => 'maria', //0
+   'email' => 'maria@email.com', // 1
+   'telefone' => '85 9 9999-0000', // 2
+        'notas' => [ //3
                 9,
                 8.5,
                 7.5,
