@@ -12,10 +12,10 @@
 
 </head>
 
-<body class = "container pt-5" style="background-color: #EFEFEF"> 
+<body class = "container pt-5" style="background-color: #F0FFFF"> 
  <!-- class container desloca para direita;
     o pt-5 É Padin top (margem para cima);
-    o style="background-color: #EFEFEF está determinando uma cor para o plano de fundo da pagina;
+    o style="background-color: #F0FFFF está determinando uma cor para o plano de fundo da pagina;
 
 
 -->

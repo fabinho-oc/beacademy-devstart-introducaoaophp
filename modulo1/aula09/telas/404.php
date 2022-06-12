@@ -2,6 +2,12 @@
 
 <div class="container">
         <div class="logo">
-          <img src="./telas/img/erro404.jpg" alt="Erro 404 - Pagina náo encontrada" width = 500 height = 500 />
+          <img src="./img/erro404.jpg" alt="Erro 404 - Pagina náo encontrada" width = "60%" />
         </div>
 </div>
+
+ <!-- src="./img/erro404.jpg" => caminho da imagem
+ alt="Erro 404 - Pagina náo encontrada" => mensagem ao passar o mouse
+ width = "60%" => é o tamanho da imagem
+
+-->
