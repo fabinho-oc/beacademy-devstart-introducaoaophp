@@ -8,17 +8,21 @@
 
 $url = $_SERVER['REQUEST_URI'];
 
+include 'telas/menu.php';
+
+
 if ($url === '/') {
 
     include 'telas/home.php';
 
 }elseif ($url ==='/login'){
 
-    echo '<h1>Pagina de Login</h1>';
+    include 'telas/login.php';
 
 } elseif ($url ==='/cadastro'){
 
-    echo '<h1>Pagina de Cadastro</h1>';
+    include 'telas/cadastro.php';
+    
 } else{
 
     echo '<h1>Pagina não encontrada</h1>';
