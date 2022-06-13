@@ -26,6 +26,10 @@ if ($url === '/') {
 
     include 'telas/cadastro.php';
 
+} elseif ($url ==='/listar'){
+
+    include 'telas/listar.php';
+
 } else{
 
     include 'telas/404.php';
