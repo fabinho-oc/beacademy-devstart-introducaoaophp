@@ -36,4 +36,4 @@ if ($url === '/') {
 
 }
 
-include 'telas/footer.php'; // rodapé da pagina .
+include 'telas/footer.php'; // rodapé da pagina
