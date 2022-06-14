@@ -1,6 +1,6 @@
 <?php
 
-function pagarConta () {
+function pagarConta ($fatura, $dinheiro) {
     //Código
 
 }

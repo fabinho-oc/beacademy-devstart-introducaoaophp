@@ -29,3 +29,9 @@ function erro404(){
     include 'telas/404.php';
 
 }
+
+function relatorio(){
+
+    include 'telas/relatorios.php';
+
+}

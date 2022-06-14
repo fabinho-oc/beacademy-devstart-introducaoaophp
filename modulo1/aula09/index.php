@@ -14,7 +14,21 @@ include 'telas/head.php'; // cabeçalho da pagina
 include 'acoes.php'; // inclusão para funcionamento das funções criadas
 
 
-if ($url === '/') {
+//Criação do Match em substituição ao IF, ELSEIF E ELSE
+
+match($url){
+    '/' => home(),
+    '/login' => login(),
+    '/cadastro' => cadastro(),
+    '/listar' =>listar(),
+    '/relatorio' => relatorio(),
+    default => erro404(),
+};
+
+
+
+/* Comentando o IF, ELSEIF e ELSE, substituido pelo Match
+ if ($url === '/') {
 
     // include 'telas/home.php'; => substituido pela função
 
@@ -42,5 +56,7 @@ if ($url === '/') {
     erro404();
 
 }
+*/
+
 
 include 'telas/footer.php'; // rodapé da pagina
