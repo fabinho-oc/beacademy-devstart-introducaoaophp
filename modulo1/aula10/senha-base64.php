@@ -6,5 +6,4 @@ $code = 'MTIzNDU2';
 
 echo base64_encode($senha).PHP_EOL; //codifica
 
-echo base64_decode($code) .PHP_EOL; //decodifica 
-
+echo base64_decode($code) .PHP_EOL; //decodifica o encode do base 64
