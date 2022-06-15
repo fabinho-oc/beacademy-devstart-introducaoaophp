@@ -1,7 +1,7 @@
 <?php
 
 //Algoritimo Argon2;
-//É o mais seguro atualemte, pois sempre gera um novo hash;
+//É o mais seguro atualemte, pois sempre gera um novo hash.
 
 $senha = '123456';
 
