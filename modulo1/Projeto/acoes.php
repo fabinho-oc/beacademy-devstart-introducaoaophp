@@ -20,6 +20,8 @@ function home(){
 
 function listar(){
 
+
+    
     include 'telas/listar.php';
 
 }
