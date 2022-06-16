@@ -18,7 +18,7 @@
     <tbody>
 
         <?php // foreach para trazer as paginas e apresentar na pagina Listar Contatos
-            foreach($contatos as $cadacontato){
+            foreach($contatos as $posicao => $cadacontato){ // a variavel posicao vai guardar a posição da informação dentro do array 
 
                 $partes = explode(';',$cadacontato);// essa função quebra a string em varias partes,
                 //primeiro informa o elemento que esta separando as strings e depois a variavel
@@ -31,9 +31,10 @@
                     echo '<td>' . $partes[1] . '</td>';
                     echo '<td>' . $partes[2] . '</td>';
                     echo "<td>
-                                <a href='#' class='btn btn-danger btn-sm'>Excluir</a>
+                                <a href='/excluir?id={$posicao}' class='btn btn-danger btn-sm'>Excluir</a>
                     
-                        </td>"; // a class='btn btn-danger faz com que o botão fique vermelho e a class btn-sm (btn small) faz com que ele fique menor 
+                        </td>"; // a class='btn btn-danger faz com que o botão fique vermelho e a class btn-sm (btn small) faz com que ele fique menor
+                                // o nome utilizado "id" dentro do href não importa, poderia ser outro, e tudo que esta após a interrogação pode ser capturado atraves da requisição "$_GET" na barra de endereço
 
                 echo '</tr>';
             }
