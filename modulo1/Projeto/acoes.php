@@ -20,8 +20,10 @@ function home(){
 
 function listar(){
 
+    //$contatos= ['A', 'B', 'C'];
 
-    
+    $contatos = file('dados/contatos.csv'); // Trazendo os dados dispostos no arquivo .csv para serem apresentados
+    // na pagina disposta no listar.php ; esta file função faz a leitura do CSV e transforma em um array do php
     include 'telas/listar.php';
 
 }
