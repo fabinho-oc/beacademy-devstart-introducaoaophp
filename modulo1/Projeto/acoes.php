@@ -82,4 +82,6 @@ function excluir(){
 
     $mensagem = 'Pronto, contato excluído';
 
+    include 'telas/mensagem.php';
+
 }
