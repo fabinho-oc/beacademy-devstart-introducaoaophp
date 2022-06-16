@@ -20,7 +20,7 @@ function cadastro(){
 
         fclose($arquivo); //fecha o arquivo que foi gravado
 
-        $mensagem = 'Pronto, cadastro realizado!';
+        $mensagem = 'Pronto, cadastro realizado!';// mensagem a ser apresentada na tela do usuario
 
         include 'telas/mensagem.php';
     }
