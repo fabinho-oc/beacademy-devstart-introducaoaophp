@@ -56,3 +56,30 @@ function relatorio(){
     include 'telas/relatorios.php';
 
 }
+
+function excluir(){
+
+    //Aulas 43 e 44
+
+    $id = $_GET['id'];
+    //echo 'Excluindo ......' . $id;
+
+    $contatos = file('dados/contatos.csv'); // recuperar e listar os contatos,  cria uma cópia do arquivo na memoria
+
+    unset($contatos[$id]); //em tradução literal é não setar, mas nesse caso sera utilizado para excluir uma posição do array
+
+    //o processo sera pegar essa copia alterada pela exclusão(o que restou), e;
+    // sobrepor o arquivo que esta no servidor
+
+    unlink('dados/contatos.csv'); // passo 1 excluir o arquivo
+    
+    $arquivo = fopen('dados/contatos.csv', 'a+'); // passo 2 cria um novo arquivo e abre para gravação
+    
+    foreach($contatos as $cadaContato){ // passo 3 realiza a leitura dos contatos que sobraram e gravam no novo arquivo
+
+            fwrite($arquivo, $cadaContato); // escreve no novo arquivo aberto cada uma das informações que ainda existem no arquivo que esta na memória
+    };
+
+    $mensagem = 'Pronto, contato excluído';
+
+}

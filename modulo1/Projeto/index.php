@@ -7,7 +7,7 @@
 //Guarda a informação dentro de uma variavel
 
 
-$url = $_SERVER['REQUEST_URI'];
+$url = explode('?',$_SERVER['REQUEST_URI']); // o explode servirá para separarmos o que consta no $Server, de forma que seja identificado em array, a posicao da informação e a infromação
 
 include 'telas/menu.php';
 include 'telas/head.php'; // cabeçalho da pagina
@@ -16,12 +16,13 @@ include 'acoes.php'; // inclusão para funcionamento das funções criadas
 
 //Criação do Match em substituição ao IF, ELSEIF E ELSE
 
-match($url){
+match($url[0]){ // para ele sempre trazer a posição 0 do array, pois é a posição que a gente precisa
     '/' => home(),
     '/login' => login(),
     '/cadastro' => cadastro(),
     '/listar' =>listar(),
     '/relatorio' => relatorio(),
+    '/excluir' => excluir(),
     default => erro404(),
 };
 
