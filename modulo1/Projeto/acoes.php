@@ -85,3 +85,9 @@ function excluir(){
     include 'telas/mensagem.php';
 
 }
+
+function editar(){
+    $id = $_GET['id'];
+
+    echo 'Editando .....' . $id;
+}

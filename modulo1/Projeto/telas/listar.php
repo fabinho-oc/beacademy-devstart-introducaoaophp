@@ -32,9 +32,12 @@
                     echo '<td>' . $partes[2] . '</td>';
                     echo "<td>
                                 <a href='/excluir?id={$posicao}' class='btn btn-danger btn-sm'>Excluir</a>
+                                <a href='/editar?id={$posicao}' class='btn btn-warning btn-sm'>Editar</a>
                     
                         </td>"; // a class='btn btn-danger faz com que o botão fique vermelho e a class btn-sm (btn small) faz com que ele fique menor
                                 // o nome utilizado "id" dentro do href não importa, poderia ser outro, e tudo que esta após a interrogação pode ser capturado atraves da requisição "$_GET" na barra de endereço
+                                // a class='btn btn-warning faz com que o botão fique amarelo e a class btn-sm (btn small) faz com que ele fique menor
+
 
                 echo '</tr>';
             }

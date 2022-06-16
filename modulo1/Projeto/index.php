@@ -23,6 +23,7 @@ match($url[0]){ // para ele sempre trazer a posição 0 do array, pois é a posi
     '/listar' =>listar(),
     '/relatorio' => relatorio(),
     '/excluir' => excluir(),
+    '/editar' => editar(),
     default => erro404(),
 };
 
