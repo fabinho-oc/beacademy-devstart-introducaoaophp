@@ -8,6 +8,15 @@ function login() {
 
 function cadastro(){
 
+    //var_dump($_POST);
+
+    $nome = $_POST['nome']; //captura os dados dos formulario digitado pelo usuario e conforme name
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+
+    $arquivo = fopen('dados/contatos.csv');
+    fwrite($arquivo, "{$nome};{$email};{$telefone}" . PHP_EOL); // escrever no arquivo
+
     include 'telas/cadastro.php';
 
 }
