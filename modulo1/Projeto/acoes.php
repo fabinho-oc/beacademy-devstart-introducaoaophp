@@ -89,8 +89,27 @@ function excluir(){
 function editar(){
     $id = $_GET['id'];
 
+    if ($_POST){
+        //echo 'funcionou';
+
+        $nome =$_POST['nome']; // RECUPERA OS DADOS QUE ESTÃO NO FORMULARIO
+        $email =$_POST['email'];
+        $telefone=$_POST['telefone'];
+
+        $contatos[$id]="[$nome};{$email};{$telefone}".PHP_EOL; // AGRUPA OS DADOS COLETADOS NO PADRÃO DE INFORMAÇÃO DO CSV
+
+        $arquivo = fopen('dados/contatos.csv', 'a+'); //abre o arquivo contatos na modalidade de ler e gravar
+
+        foreach($contatos as $cadaContato){
+
+            fwrite($arquivo, $cadaContato);
+        }
+
+
+    }
+
     //echo 'Editando .....' . $id;
-    $contatos = file('dados/contatos.csv', 'a+'); // busca o arquivo
+    $contatos = file('dados/contatos.csv'); // busca o arquivo
 
     $dados = explode(';', $contatos[$id]); // quebra 1 string de array em outras strings de array a cada intervalo que tenha ';'
 
