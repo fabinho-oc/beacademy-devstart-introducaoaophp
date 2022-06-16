@@ -89,6 +89,14 @@ function excluir(){
 function editar(){
     $id = $_GET['id'];
 
+    //echo 'Editando .....' . $id;
+    $contatos = file('dados/contatos.csv'); // busca o arquivo
+
+    $dados = explode(';', $contatos[$id]); // quebra 1 string de array em outras strings de array a cada intervalo que tenha ';'
+
+    //var_dump($dados);
+
+
     if ($_POST){
         //echo 'funcionou';
 
@@ -96,24 +104,25 @@ function editar(){
         $email =$_POST['email'];
         $telefone=$_POST['telefone'];
 
-        $contatos[$id]="[$nome};{$email};{$telefone}".PHP_EOL; // AGRUPA OS DADOS COLETADOS NO PADRÃO DE INFORMAÇÃO DO CSV
+        $contatos[$id]="{$nome};{$email};{$telefone}".PHP_EOL; // AGRUPA OS DADOS COLETADOS NO PADRÃO DE INFORMAÇÃO DO CSV
+
+        unlink ('dados/contatos.csv');
 
         $arquivo = fopen('dados/contatos.csv', 'a+'); //abre o arquivo contatos na modalidade de ler e gravar
 
         foreach($contatos as $cadaContato){
 
-            fwrite($arquivo, $cadaContato);
+            fwrite($arquivo, $cadaContato); //escreve no arquivo as informações
+
         }
 
+        fclose($arquivo); //fecha o arquivo que foi gravado
+
+        $mensagem = 'Pronto, contato atualizado';
+
+        include 'telas/mensagem.php';
 
     }
-
-    //echo 'Editando .....' . $id;
-    $contatos = file('dados/contatos.csv'); // busca o arquivo
-
-    $dados = explode(';', $contatos[$id]); // quebra 1 string de array em outras strings de array a cada intervalo que tenha ';'
-
-    //var_dump($dados);
 
     include 'telas/editar.php';
 
