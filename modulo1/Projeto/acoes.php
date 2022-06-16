@@ -89,5 +89,13 @@ function excluir(){
 function editar(){
     $id = $_GET['id'];
 
-    echo 'Editando .....' . $id;
+    //echo 'Editando .....' . $id;
+    $contatos = file('dados/contatos.csv', 'a+'); // busca o arquivo
+
+    $dados = explode(';', $contatos[$id]); // quebra 1 string de array em outras strings de array a cada intervalo que tenha ';'
+
+    //var_dump($dados);
+
+    include 'telas/editar.php';
+
 }
