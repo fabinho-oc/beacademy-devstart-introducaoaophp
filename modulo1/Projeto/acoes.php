@@ -18,8 +18,11 @@ function cadastro(){
         $arquivo = fopen('dados/contatos.csv','a+');
         fwrite($arquivo, "{$nome};{$email};{$telefone}" . PHP_EOL); // escrever no arquivo
 
-        echo 'Pronto, Cadastro realizado!';
+        fclose($arquivo); //fecha o arquivo que foi gravado
 
+        $mensagem = 'Pronto, cadastro realizado!';
+
+        include 'telas/mensagem.php';
     }
 
     include 'telas/cadastro.php';
