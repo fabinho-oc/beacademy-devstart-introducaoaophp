@@ -1,5 +1,5 @@
 <?php
-
+//AULA 40
 $arquivo = fopen('produtos.csv','a+'); // no primeiro campo informa o arquivo e no segundo campo informar como o arquivo sera abaerto ('r' (reed) leitura, 'w' (white) escrever ou 'a+'ler e escrever)
 //a função abre o arquivo e quando não encontra ele cria e abre o arquivo.
 
