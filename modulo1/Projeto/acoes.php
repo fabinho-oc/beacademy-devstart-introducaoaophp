@@ -96,7 +96,6 @@ function editar(){
 
     //var_dump($dados);
 
-
     if ($_POST){
         //echo 'funcionou';
 
